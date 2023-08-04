@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+        <AssemblyName>TestWebApp.Web</AssemblyName>
+        <RootNamespace>TestWebApp.Web</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TestWebApp.Application\TestWebApp.Application.csproj" />
+      <ProjectReference Include="..\TestWebApp.Data\TestWebApp.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.6.23329.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0-preview.6.23329.4">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.4" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0-preview.6.23329.7" />
+    </ItemGroup>
+
+</Project>
